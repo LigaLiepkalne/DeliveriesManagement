@@ -15,10 +15,10 @@
                             <thead
                                 class="text-xl text-gray-600 uppercase bg-gray-50 dark:bg-gray-700">
                             <tr>
-                                <th scope="col" class="px-6 py-3">
+                                <th class="px-6 py-3">
                                     Name
                                 </th>
-                                <th scope="col" class="px-6 py-3">
+                                <th class="px-6 py-3">
                                     Address
                                 </th>
                             </tr>

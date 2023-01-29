@@ -49,8 +49,8 @@
                             @endforeach
                             </tbody>
                         </table>
-                        <span class="text-sm text-gray-500 p-4">Total results: {{ $total }} </span>
-                        <!-- Previous Button -->
+                        <span class="text-sm text-gray-600 p-4">Total results: {{ $total }} </span>
+                        <!-- Navigate to previous page -->
                         <a href="{{ url()->current() . '?page=' . ($currentPage - 1) }}"
                            class="inline-flex  px-4 py-2 mt-2 text-sm font-medium text-gray-500 bg-white border border-gray-300
                            rounded-lg hover:bg-ggray-400 dark:hover:bg-gray-700 dark:hover:text-white"
@@ -59,7 +59,7 @@
                             @endif
                         > <
                         </a>
-                        <!-- Next Button -->
+                        <!-- Navigate to next page -->
                         <a href="{{ url()->current() . '?page=' . ($currentPage + 1) }}"
                            class="inline-flex px-4 py-2 mt-2  text-sm font-medium text-gray-500 bg-white border border-gray-300
                            rounded-lg hover:bg-ggray-400 dark:hover:bg-gray-700 dark:hover:text-white"

@@ -9,10 +9,6 @@
         width: 60%;
         margin: auto;
     }
-
-    .second {
-        width: available;
-    }
 </style>
 
 <x-app-layout>
@@ -30,7 +26,7 @@
                         <table class="border-collapse">
                             <thead>
                             <tr>
-                                <th class="text-xl text-gray-600 uppercase bg-gray-50 dark:bg-gray-700 pb-3">
+                                <th class="text-xl text-gray-600 uppercase pb-3">
                                     Client name
                                 </th>
                             </tr>
@@ -43,7 +39,8 @@
                                         {{ $client->name }}
                                     </th>
                                     <td class="px-6 py-4">
-                                    <a href="#" class="show-addresses-button uppercase" style="color: lightslategray; font-weight: bold"
+                                        <a href="#" class="show-addresses-button uppercase"
+                                           style="color: lightslategray; font-weight: bold"
                                            data-client-id="{{ $client->id }}">Show addresses</a>
                                     </td>
                                     <td class="px-6 py-4">
@@ -62,18 +59,16 @@
             </div>
         </div>
 
-        <div class="py-12 second">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 text-gray-900">
                         <table>
+                            <p class="text-xl text-gray-600 font-semibold uppercase pb-3">Client addresses</p>
                             <td id="addresses"></td>
-                            <p class="text-xs font-semibold text-gray-700 uppercase mb-4">Client addresses</p>
                         </table>
                     </div>
                 </div>
             </div>
-        </div>
     </div>
 
     <script>
