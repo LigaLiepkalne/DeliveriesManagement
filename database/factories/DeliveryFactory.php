@@ -17,15 +17,11 @@ class DeliveryFactory extends Factory
 
     public function definition(): array
     {
-        //$addressIds = Address::pluck('id');
-
         return [
             'route_id' => Route::factory(),
             'address_id' => Address::factory(),
             'type' => $this->faker->randomElement(Delivery::DELIVERY_TYPES),
             'status' => $this->faker->randomElement(Delivery::DELIVERY_STATUSES),
         ];
-
-
     }
 }
