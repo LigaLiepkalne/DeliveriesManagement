@@ -10,9 +10,6 @@ class DeliveryLine extends Model
 {
     use HasFactory;
 
-    protected $table = 'delivery_lines';
-    protected $primaryKey = 'id';
-
     public $timestamps = false;
 
     protected $fillable = [
@@ -26,6 +23,4 @@ class DeliveryLine extends Model
     {
         return $this->belongsTo(Delivery::class);
     }
-
-    //one delivery line can have one route
 }

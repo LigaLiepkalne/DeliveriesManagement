@@ -17,7 +17,6 @@ class Client extends Model
         'email',
     ];
 
-    //define the relationship with the addresses table (one to many)
     public function addresses(): HasMany
     {
         return $this->hasMany(Address::class);

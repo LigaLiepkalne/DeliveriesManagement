@@ -1,13 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\ClientDeliveries;
 
-use App\Models\Client;
-use Illuminate\Http\Request;
-use Illuminate\Support\Collection;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
-use Symfony\Component\Console\Input\Input;
 
 class LastDeliveryController extends Controller
 {
@@ -41,7 +38,7 @@ class LastDeliveryController extends Controller
         $lastDeliveries = $lastDeliveries->forPage($currentPage, $perPage);
         $lastPage = ceil($total / $perPage);
 
-        return view('last-deliveries', [
+        return view('deliveries.last-deliveries', [
             'lastDeliveries' => $lastDeliveries,
             'currentPage' => $currentPage,
             'lastPage' => $lastPage,

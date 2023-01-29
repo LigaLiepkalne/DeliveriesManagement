@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\ClientDeliveries;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
 
@@ -22,17 +23,16 @@ class DeliveryController extends Controller
                 'addresses.title',
                 'routes.date',
                 DB::raw('SUM(delivery_lines.price * delivery_lines.qty) as price_sum'),
-                //get clients that both have
                 DB::raw('(CASE
                 WHEN deliveries.status = 1 THEN "not delivered"
                 WHEN deliveries.status = 2 THEN "delivered"
                 ELSE "canceled" END) as status'),
             )
             ->where('clients.id', $id)
-            ->groupBy('clients.id', 'addresses.id', 'deliveries.id', 'routes.date', 'routes.status')
+            ->groupBy('clients.id', 'addresses.id', 'deliveries.id', 'routes.date')
             ->get();
 
-        return view('deliveries', [
+        return view('deliveries.deliveries', [
             'clientDeliveryData' => $clientDeliveryData,
         ]);
     }
