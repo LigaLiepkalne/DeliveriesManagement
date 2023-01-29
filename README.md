@@ -1,6 +1,6 @@
 # Client Delivery Data Management
 
-### Project aims at efficiently storing, retrieving, and managing client delivery data using MySQL. It consists of five pages that allow you to manage client delivery information. Best practices for indexing and optimizing queries are introduced to ensure improved performance.
+#### Project aims at efficiently storing, retrieving, and managing client delivery data using MySQL. It consists of five pages that allow you to manage client delivery information. Best practices for indexing and optimizing queries are introduced to ensure improved performance.
 
 - [Overview](#overview)
 - [Technologies used](#technologies-used)
