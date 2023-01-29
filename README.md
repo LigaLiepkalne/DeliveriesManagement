@@ -19,7 +19,7 @@
 
 ### Run project
 
-- Clone project `git clone https://github.com/LigaLiepkalne/InfinityBank.git`
+- Clone project `git clone https://github.com/LigaLiepkalne/DeliveriesManagement.git`
 
 - Database setup
     - Connection configuration: copy **env.example** file, remove *example* from file name and set DB_DATABASE, DB_USERNAME, and DB_PASSWORD variables to the appropriate values.
