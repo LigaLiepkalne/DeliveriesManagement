@@ -15,15 +15,11 @@ return new class extends Migration
     {
         Schema::create('deliveries', function (Blueprint $table) {
             $table->id();
-            //$table->foreignId('route_id')->constrained();
-            //$table->foreignId('address_id')->constrained();
-            $table->unsignedBigInteger('route_id');
-            $table->unsignedBigInteger('address_id');
-            $table->foreign('route_id')->references('id')->on('routes')->onDelete('cascade');
-            $table->foreign('address_id')->references('id')->on('addresses')->onDelete('cascade');
-
+            $table->foreignId('route_id')->constrained()->onDelete('cascade');
+            $table->foreignId('address_id')->constrained()->onDelete('cascade');
             $table->enum('type', [1, 2, 3]);
             $table->enum('status', [1, 2, 3]);
+            $table->index(['route_id', 'address_id', 'type', 'status']);
         });
     }
 

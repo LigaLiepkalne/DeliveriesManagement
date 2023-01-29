@@ -15,12 +15,11 @@ return new class extends Migration
     {
         Schema::create('delivery_lines', function (Blueprint $table) {
             $table->id();
-            //$table->foreignId('delivery_id')->constrained();
-            $table->unsignedBigInteger('delivery_id');
-            $table->foreign('delivery_id')->references('id')->on('deliveries')->onDelete('cascade');
+            $table->foreignId('delivery_id')->constrained()->onDelete('cascade');
             $table->string('item');
             $table->float('price');
             $table->float('qty');
+            $table->index('delivery_id');
         });
     }
 

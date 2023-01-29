@@ -16,10 +16,8 @@ return new class extends Migration
         Schema::create('addresses', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            //$table->foreignId('client_id')->constrained();
-            $table->unsignedBigInteger('client_id');
-            $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade');
-
+            $table->foreignId('client_id')->constrained()->onDelete('cascade');
+            $table->index('client_id');
         });
     }
 

@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('driver_name');
             $table->enum('car_type', [1, 2]);
             $table->date('date');
+            $table->index(['date', 'status']);
         });
     }
 
