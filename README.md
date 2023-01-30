@@ -21,15 +21,15 @@
 
 - Clone project `git clone https://github.com/LigaLiepkalne/DeliveriesManagement.git`
 
-- Database setup
-    - Connection configuration: copy **env.example** file, remove *example* from file name and set DB_DATABASE, DB_USERNAME, and DB_PASSWORD variables to the appropriate values.
-     
-    - Run `php artisan migrate` to create the necessary tables.
-     - Run ```php artisan db:seed``` to seed the database with the necessary data.
-    
  - Install project dependencies
     - Run `composer install` to install PHP dependencies.
     - Run `npm install` to install JavaScript dependencies.
     - Run `npm run dev` to build the front-end assets.
 
+- Database setup
+    - Connection configuration: copy **env.example** file, remove *example* from file name and set DB_DATABASE, DB_USERNAME, and DB_PASSWORD variables to the appropriate values.
+     
+    - Run `php artisan migrate` to create the necessary tables.
+    - Run ```php artisan db:seed``` to seed the database with the necessary data.
+    
 - Run `php artisan serve` to start the development server.
